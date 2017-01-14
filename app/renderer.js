@@ -27,10 +27,11 @@ function create() {
 	space.animations.play('normal',16,true);
 	//armas
 	normalShoot = game.add.weapon(30, 'shoot1');
+	normalShoot.trackSprite(space, 16, 0);
 	normalShoot.bulletKillType = Phaser.Weapon.KILL_WORLD_BOUNDS;
 	normalShoot.bulletAngleOffset = 90;
 	normalShoot.bulletSpeed = 400;
-	normalShoot.fireRate = 30;
+	normalShoot.fireRate = 160;
 	//teclas
 	cursors = this.input.keyboard.createCursorKeys();
 	fireButton = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR);
